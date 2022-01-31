@@ -74,6 +74,12 @@ const workDays = (date1, date2) => {
     return calc - weekendDays + 1;
 }
 
+const hoursAndMinutes = (hoursFraction) => {
+    const hours = Math.trunc(hoursFraction);
+    const minutes = Math.round((hoursFraction - hours) * 60);
+    return `${hours}:${minutes}`;
+}
+
 // END DATE FUNCTIONS.
 
 // MATH FUNCTIONS.
@@ -472,7 +478,7 @@ FORECAST_ACCOUNT_ID=${forecast_account_id}`;
             }
         });
     });
-    console.log(`Total Hours Logged: ${round(totalHoursLogged)} hours`);
+    console.log(`Total Hours Logged: ${round(totalHoursLogged)} hours (${hoursAndMinutes(totalHoursLogged)})\n`);
 }
 
 go();
