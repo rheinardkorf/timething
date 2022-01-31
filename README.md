@@ -4,7 +4,7 @@ At this stage `timething` only uses "Personal access tokens". Visit [https://id.
 
 If you click on the new token in the list you will be able to get your access token.  To get your Harvest ID click on the "Choose account" dropdown and select a Harvest Account. To get your Forecast ID click on the "Choose account" dropdown and select a Forecast Account. 
 
-**NB! `timething` requires both the Harvest and Forecast account identifiers.  It is also expected that these two accounts are in the same organisation for them to be connected."
+**NB! `timething` requires both the Harvest and Forecast account identifiers.  It is also expected that these two accounts are in the same organisation for them to be connected.**
 
 To configure `timething` with your "Personal access tokens" run:
 
