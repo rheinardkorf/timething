@@ -1,0 +1,17 @@
+{
+  "name": "timething",
+  "version": "0.1.0",
+  "description": "Simple Forecast/Harvest reporting tool for individuals.",
+  "main": "index.js",
+  "author": "Rheinard Korf <rheinard.korf@xwp.co>",
+  "license": "MIT",
+  "bin": {
+    "timething": "index.js"
+  },
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "forecast-promise": "^1.2.1",
+    "mkdirp": "^1.0.4",
+    "r2": "^2.0.1"
+  }
+}
