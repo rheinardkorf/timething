@@ -12,7 +12,7 @@ To configure `timething` with your "Personal access tokens" run:
 npx timething config
 ```
 
-`timething` caches the fetched tokens from Forecast. If you dont see your projects show up you can flush this cache with:
+`timething` caches the fetched projects from Forecast. If you dont see your projects show up you can flush this cache with:
 
 ```
 npx timething update-projects
