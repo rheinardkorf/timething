@@ -11,7 +11,7 @@ const projectConfigPath = `${os.homedir}/.timething`;
 const projectConfig = `${projectConfigPath}/config`;
 
 // Ensure config directory exists.
-mkdirp.sync(projectConfigPath); 
+mkdirp.sync(projectConfigPath);
 
 dotenv.config({ path: projectConfig });
 
@@ -50,9 +50,18 @@ const getWeekPeriod = (date) => {
     date = date || new Date();
     const diff = date.getDate() - date.getDay() + (date.getDay() === 0 ? -6 : 1);
 
+    const startDate = new Date(date.setDate(diff - 1));
+    const endDate = new Date(date.setDate(diff + 5));
+
+    // If endDate is before startDate, we need to move the endDate forward.
+    if (endDate < startDate) {
+        // Add one month.
+        endDate.setMonth(endDate.getMonth() + 1);
+    }
+
     return {
-        start: yyyymmdd(new Date(date.setDate(diff - 1))),
-        end: yyyymmdd(new Date(date.setDate(diff + 5))),
+        start: yyyymmdd(startDate),
+        end: yyyymmdd(endDate),
     }
 }
 
